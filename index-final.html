@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	body{
+		background:url('http://www.beiz.jp/web/photos_S/wood-texture/wood-texture_beiz.jp_S47661.jpg');
+		background-size: cover;
+		text-align: center;
+		text-shadow:1px 1px white;
+	}
+	#date {
+		font-size: 300%;
+	}
+	</style>
+</head>
+<body>
+<h1>My First Web Page</h1>
+
+<p>My first paragraph.</p>
+
+<button onclick="showDate()">Show Date</button>
+
+<p id="date">Date?</p>
+
+<script>
+function showDate() {
+
+	var date = new Date();
+
+	var year = date.getFullYear();
+	var month = date.getMonth();
+	var day = date.getDate();
+
+	var str = year + '/' + month + '/' + day;
+
+	document.getElementById("date").innerHTML = str;
+}
+</script>
+</body>
+</html>
